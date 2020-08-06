@@ -15,17 +15,17 @@ jobs:
 #           checkName: codeclimate
 #           ref: ${{ github.event.pull_request.head.sha || github.sha }}
       - uses: actions/checkout@v2
-        if: steps.wait-for-build.outputs.conclusion == 'success'
+#         if: steps.wait-for-build.outputs.conclusion == 'success'
       - name: Evaluator step
         id: test
         uses: betrybe/jest-evaluator-action@v5
-        if: steps.wait-for-build.outputs.conclusion == 'success'
+#         if: steps.wait-for-build.outputs.conclusion == 'success'
         with:
           repository-test-name: 'betrybe/sd-0x-a-cli-of-ice-and-fire-tests'
           repository-test-branch: 'master'
       - name: Store evaluation step
         uses: betrybe/store-evaluation-action@v2
-        if: steps.wait-for-build.outputs.conclusion == 'success'
+#         if: steps.wait-for-build.outputs.conclusion == 'success'
         with:
           evaluation-data: ${{ steps.test.outputs.result }}
           environment: staging
