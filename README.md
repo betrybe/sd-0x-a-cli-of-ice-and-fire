@@ -55,7 +55,7 @@ Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu
 
 # Entregáveis
 
-Para entregar o seu projeto você deverá criar um Pull Request neste repositório. 
+Para entregar o seu projeto você deverá criar um Pull Request neste repositório.
 
 Lembre-se que você pode consultar nosso conteúdo sobre [Git & GitHub](https://course.betrybe.com/intro/git/) sempre que precisar!
 
