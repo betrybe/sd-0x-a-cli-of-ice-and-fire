@@ -287,18 +287,8 @@ O comportamento deve ser idêntico ao de listar personagens, inclusive a pagina�
 
 - [**Verificar a opcao "Página anterior" quando vou para proxima pagina**]
 
-
-## Requisitos Bônus:
-
-### 10 - Implemente testes unitários que cubram 90% do código
-
-Cobrir 90% dos testes unitários do projeto, utilizando os frameworks [`jest`](https://jestjs.io/docs/en/getting-started.html) e [`inquirer`](https://github.com/SBoudrias/Inquirer.js#documentation).
-
-##### As seguintes verificações serão feitas:
-
-- [**Iremos usar o jest para rodar o coverage do projeto para ver se cobriu 90% dos testes unitarios**]
-
 ---
+
 ### DURANTE O DESENVOLVIMENTO
 
 * Faça `commits` das alterações que você fizer no código regularmente
