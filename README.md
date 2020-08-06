@@ -271,7 +271,7 @@ O comportamento deve ser idêntico ao de listar personagens, inclusive a pagina�
 
 **Atenção** A propriedade `swornMembers` não deve ser exibida ao selecionar uma casa.
 
-![exemplo do resultado](./public/livro_nao_existente.gif)
+![exemplo do resultado](./public/menu_casas.gif)
 
 ##### As seguintes verificações serão feitas:
 
