@@ -4,7 +4,6 @@ const superagent = require('superagent');
 const cli = require('../lib/cli');
 
 const houseMenu = require('../lib/menus/houses');
-const actionsHouse = require('../lib/menus/houses/actions');
 const actionsActionHouse = require('../lib/menus/houses/actions/list');
 const housesFixture = require('../test/fixtures/houses');
 
