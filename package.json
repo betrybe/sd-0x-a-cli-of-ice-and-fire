@@ -5,7 +5,6 @@
   "main": "cli.js",
   "scripts": {
     "test": "jest  --coverage",
-    "coverageJson": "jest  --coverage --coverageReporters='json-summary' --testFailureExitCode=0",
     "lint": "eslint **/*.js",
     "start": "node index.js"
   },
@@ -33,10 +32,7 @@
     "eslint-plugin-react-hooks": "2.5.0",
     "jest": "25.1.0",
     "shelljs": "0.8.4"
-  },
-  "collectCoverageFrom": [
-    "!test/coverage.test.js"
-  ], 
+  }, 
   "dependencies": {
     "inquirer": "7.1.0",
     "prettyjson": "^1.2.1",
