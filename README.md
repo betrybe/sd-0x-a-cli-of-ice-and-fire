@@ -98,10 +98,12 @@ Para cada menu novo que você adicionar, crie um diretório dentro de `lib/menus
 *A estrutura do projeto deve ser a mesma do menu character*
 
 Estrutura do menu Character:
+```sh
 lib/menus/character
 lib/menus/character/index.js
 lib/menus/character/actions/index.js
 lib/menus/character/actions/list.js
+```
 
 Para menus books:
 
@@ -169,7 +171,6 @@ Você também pode utilizar async/await sempre que precisar manipular as Promise
 
 > **Dica**: Para entender como utilizar Promises ao invés de callbacks com o superagent, você pode consultar a [documentação oficial no npm](https://www.npmjs.com/package/superagent#node).
 
-
 ### 1 - Exibir, no menu inicial, o sub-menu "livros" e, dentro dele, uma opção "Pesquisar livros"
 
 Ao selecionar essa opção, permita que o usuário insira o nome do livro que deseja pesquisar.
@@ -184,7 +185,7 @@ Ao selecionar essa opção, permita que o usuário insira o nome do livro que de
 
 - [**Verifica a opção Pesquisar livros está dentro da opção livros**]
 
-### 3 - Utilizando o nome inserido, realizar uma requisição para o endpoint `/books` da API, com o parâmetro `?name` contendo o nome digitado pelo usuário e apresentar os resultados para o usuário numa lista
+### 2 - Utilizando o nome inserido, realizar uma requisição para o endpoint `/books` da API, com o parâmetro `?name` contendo o nome digitado pelo usuário e apresentar os resultados para o usuário numa lista
 
 Você pode consultar [a documentação](https://www.anapioficeandfire.com/Documentation#books) deste endpoint para verificar qual o formato em que os dados serão retornados.
 
@@ -198,7 +199,7 @@ A lista deve exibir apenas o nome do livro, e deve permitir que o usuário escol
 
 - [**Verificar se, quando escolho  o livro "A Game of Thrones", ele chama a API e mostra os dados do livro, em seguida mostrando a lista dos outros livros'**]
 
-### 4 - Caso nada seja digitado no momento da pesquisa, exiba todos os livros, paginados de 10 em 10
+### 3 - Caso nada seja digitado no momento da pesquisa, exiba todos os livros, paginados de 10 em 10
 
 Quando o CLI solicitar o nome do livro que a pessoa deseja pesquisar, existe a possibilidade de nada ser digitado. Nesse caso, a busca deve ser feita com o parâmetro `?name` em branco (`?name=`), para que a API retorne todos os livros.
 
@@ -210,7 +211,7 @@ Quando o CLI solicitar o nome do livro que a pessoa deseja pesquisar, existe a p
 
 - [**Ver se retorna todos os livros paginados**]
 
-### 5 - Apresentar as opções "Próxima página" e "Página anterior" caso existam mais de 10 resultados
+### 4 - Apresentar as opções "Próxima página" e "Página anterior" caso existam mais de 10 resultados
 
 Ambas as opções só devem ser exibidas quando de fato forem úteis, ou seja, se o usuário já estiver na primeira página, a opção "Página anterior" não deve ser exibida e, se o usuário já estiver na última página, a opção "Próxima página" não deve ser exibida.
 
@@ -226,7 +227,7 @@ Você precisará ler o conteúdo do header `link`, retornado pela API quando uti
 
 - [**Verificar a presença da opção "Página anterior" quando vou para próxima página na lista de livros**]
 
-### 6 - Quando o um livro for selecionado, exibir na tela as propriedades daquele livro
+### 5 - Quando o um livro for selecionado, exibir na tela as propriedades daquele livro
 
 **Atenção:** As propriedades `characters` e `povCharacters` não deverão ser exibidas.
 
@@ -240,7 +241,7 @@ Após exibir os detalhes do livro, a aplicação deve retornar para a tela de re
 
 - [**Selecionar livro "A Clash of Kings" e verificar que seus dados apresentados estão corretos**]
 
-### 7 - Sempre exibir uma opção de voltar
+### 6 - Sempre exibir uma opção de voltar
 
 Em todos os menus, uma opção de "voltar" deve ser exibida. Essa opção deve levar o usuário para o menu anterior e, através dela, deve ser possível chegar de volta ao menu principal.
 
@@ -254,8 +255,7 @@ Em todos os menus, uma opção de "voltar" deve ser exibida. Essa opção deve l
 
 - [**Verificar a presença da opção "Voltar para o menu anterior" e "Página anterior" no menu de "Listar livros na página seguinte"**]
 
-
-### 8 - Caso nenhum resultado for encontrado, exibir uma mensagem e voltar ao menu de livros
+### 7 - Caso nenhum resultado for encontrado, exibir uma mensagem e voltar ao menu de livros
 
 A API realiza a busca por palavras exatas no valor informado no parâmetro `name`. Caso seja informado um livro que não existe, a API retornará um Array vazio.
 
@@ -267,7 +267,7 @@ Para esses casos, exiba na tela a mensagem `"Nenhum livro encontrado para essa p
 
 - [**Enviar um nome de livro que não existe e verificar que a mensagem "Nenhum livro encontrado para essa pesquisa" é exibida na tela posteriormente**]
 
-### 9 - Exibir opção de listar as casas do mundo de Game of Thrones
+### 8 - Exibir opção de listar as casas do mundo de Game of Thrones
 
 Exibir, no menu principal, um menu "casas" e, dentro dele, uma opção "Listar casas".
 
