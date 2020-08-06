@@ -87,8 +87,5 @@ describe('Validar o menu Houses', () => {
             expect(choicesMenu).toContain('Página anterior');
             expect(choicesMenu).toContain('Voltar para o menu anterior');
         });
-
-
-
     });
 });
