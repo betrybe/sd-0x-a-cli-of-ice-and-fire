@@ -31,10 +31,6 @@
     {
       "description": "Exibir opção de listar as casas do mundo de Game of Thrones",
       "bonus": false
-    },
-    {
-      "description": "Implemente testes unitários que cubram 90% do código",
-      "bonus": true
     }
   ]
 }
