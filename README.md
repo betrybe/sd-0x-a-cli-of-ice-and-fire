@@ -271,7 +271,7 @@ Para esses casos, exiba na tela a mensagem `"Nenhum livro encontrado para essa p
 
 Exibir, no menu principal, um menu "casas" e, dentro dele, uma opção "Listar casas".
 
-O comportamento deve ser idêntico ao de listar personagens, inclusive a paginação, que deve atender ao [requisito 5](#5---apresentar-as-opções-"próxima-página"-e-"página-anterior"-caso-existam-mais-de-10-resultados).
+O comportamento deve ser idêntico ao de listar personagens, inclusive a paginação, que deve atender ao [requisito 5](#5---quando-o-um-livro-for-selecionado-exibir-na-tela-as-propriedades-daquele-livro).
 
 **Atenção** A propriedade `swornMembers` não deve ser exibida ao selecionar uma casa.
 
