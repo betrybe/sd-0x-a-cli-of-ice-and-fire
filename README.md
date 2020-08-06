@@ -55,7 +55,6 @@ Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu
 
 # Entregáveis
 
-
 Para entregar o seu projeto você deverá criar um Pull Request neste repositório. Este Pull Request deverá conter os arquivos `[Arquivos obrigatórios para concluri entrega]`, que conterão seu código `[Exemplo: HTML, CSS e JavaScript]`, respectivamente. Você pode adicionar outros arquivos se julgar necessário. ⚠️ É importante que seus arquivos tenham exatamente estes nomes! ⚠️
 
 Você pode adicionar outros arquivos se julgar necessário. Qualquer dúvida, procure a monitoria. Lembre-se que você pode consultar nosso conteúdo sobre Git & GitHub sempre que quiser!
@@ -86,7 +85,7 @@ O projeto tem até a seguinte data: `DD/MM/YYYY - 14:00h`. Para ser entregue a a
 
 ![exemplo do resultado](./public/funcionamento_do_projeto.gif)
 
-## ⚠️ Leia-os atentamente e siga à risca o que for pedido. Em particular. ⚠️
+## ⚠️ Leia-os atentamente e siga à risca o que for pedido. ⚠️
 
 O não cumprimento de um requisito, total ou parcialmente, impactará em sua avaliação.
 
@@ -162,7 +161,7 @@ module.exports = {
 
 ## Requisitos Obrigatórios:
 
- O projeto deve ser feito, necessariamente, utilizando Promises
+ O projeto deve ser feito, necessariamente, utilizando Promises.
 
 Não pode haver nenhum tipo de código síncrono ou que utilize callbacks.
 
@@ -181,10 +180,9 @@ Ao selecionar essa opção, permita que o usuário insira o nome do livro que de
 
 ##### As seguintes verificações serão feitas:
 
-- [**Verifica se a opcao livros esta no menu inicial**]
+- [**Verifica se a opção livros está no menu inicial**]
 
-- [**verifica a opcao Pesquisar livros esta dentro da opcao livros**]
-
+- [**Verifica a opção Pesquisar livros está dentro da opção livros**]
 
 ### 3 - Utilizando o nome inserido, realizar uma requisição para o endpoint `/books` da API, com o parâmetro `?name` contendo o nome digitado pelo usuário e apresentar os resultados para o usuário numa lista
 
@@ -196,11 +194,9 @@ A lista deve exibir apenas o nome do livro, e deve permitir que o usuário escol
 
 ![exemplo do resultado](./public/listar_um_determinado_livro.gif)
 
-
 ##### As seguintes verificações serão feitas:
 
-- [**Verificar se quando escolho  o livro "A Game of Thrones" ele chama a api e mostra os dados do livro,em seguida mostra a lista dois outros livros'**]
-
+- [**Verificar se, quando escolho  o livro "A Game of Thrones", ele chama a API e mostra os dados do livro, em seguida mostrando a lista dos outros livros'**]
 
 ### 4 - Caso nada seja digitado no momento da pesquisa, exiba todos os livros, paginados de 10 em 10
 
@@ -210,10 +206,9 @@ Quando o CLI solicitar o nome do livro que a pessoa deseja pesquisar, existe a p
 
 ##### As seguintes verificações serão feitas:
 
-- [**Digitar nome do livro em branco e ver se chama a api passando em branco**]
+- [**Digitar nome do livro em branco e ver se a API é chamada passando o parâmetro "nome" em branco**]
 
 - [**Ver se retorna todos os livros paginados**]
-
 
 ### 5 - Apresentar as opções "Próxima página" e "Página anterior" caso existam mais de 10 resultados
 
@@ -227,10 +222,9 @@ Você precisará ler o conteúdo do header `link`, retornado pela API quando uti
 
 ##### As seguintes verificações serão feitas:
 
-- [**Verificar a opcao "Próxima página**]
+- [**Verificar a presença da opção "Próxima página" na lista de livros**]
 
-- [**Verificar a opcao "Página anterior" quando vou para proxima pagina**]
-
+- [**Verificar a presença da opção "Página anterior" quando vou para próxima página na lista de livros**]
 
 ### 6 - Quando o um livro for selecionado, exibir na tela as propriedades daquele livro
 
@@ -244,7 +238,7 @@ Após exibir os detalhes do livro, a aplicação deve retornar para a tela de re
 
 ##### As seguintes verificações serão feitas:
 
-- [**Selecionar livro "A Clash of Kings" e verificar os dados dele**]
+- [**Selecionar livro "A Clash of Kings" e verificar que seus dados apresentados estão corretos**]
 
 ### 7 - Sempre exibir uma opção de voltar
 
@@ -254,24 +248,24 @@ Em todos os menus, uma opção de "voltar" deve ser exibida. Essa opção deve l
 
 ##### As seguintes verificações serão feitas:
 
-- [**Verificar a opcao "Voltar para o menu principal" no menu de livros**]
+- [**Verificar a presença da opção "Voltar para o menu principal" no menu de livros**]
 
-- [**Verificar a opcao "Voltar para o menu principal" no menu de "Listar livros"**]
+- [**Verificar a presença da opção "Voltar para o menu principal" no menu de "Listar livros"**]
 
-- [**Verificar a opcao "Voltar para o menu anterior" e "Página anterior" no menu de "Listar livros na pagina seguinte"**]
+- [**Verificar a presença da opção "Voltar para o menu anterior" e "Página anterior" no menu de "Listar livros na página seguinte"**]
 
 
 ### 8 - Caso nenhum resultado for encontrado, exibir uma mensagem e voltar ao menu de livros
 
 A API realiza a busca por palavras exatas no valor informado no parâmetro `name`. Caso seja informado um livro que não existe, a API retornará um Array vazio.
 
-Para esses casos, exiba na tela a mensagem `"Nenhum livro encontrado para essa pesquisa"` e, logo em seguida, retorne ao menu de livros
+Para esses casos, exiba na tela a mensagem `"Nenhum livro encontrado para essa pesquisa"` e, logo em seguida, retorne ao menu de livros.
 
 ![exemplo do resultado](./public/livro_nao_existente.gif)
 
 ##### As seguintes verificações serão feitas:
 
-- [**Enviar um nome de livro que nao existe vazio verificar a mensagem "Nenhum livro encontrado para essa pesquisa"**]
+- [**Enviar um nome de livro que não existe e verificar que a mensagem "Nenhum livro encontrado para essa pesquisa" é exibida na tela posteriormente**]
 
 ### 9 - Exibir opção de listar as casas do mundo de Game of Thrones
 
@@ -298,13 +292,7 @@ O comportamento deve ser idêntico ao de listar personagens, inclusive a pagina�
 
 ### 10 - Implemente testes unitários que cubram 90% do código
 
-Cobrir 90% dos testes unitarios do projeto, utilizando os frameworks ,jest,inquirer
-
-Aqui esta o link da documentação dos frameworks:
-
-- [Jest:](https://jestjs.io/docs/en/getting-started.html)
-
-- [Inquirer:](https://github.com/SBoudrias/Inquirer.js#documentation)
+Cobrir 90% dos testes unitários do projeto, utilizando os frameworks [`jest`](https://jestjs.io/docs/en/getting-started.html) e [`inquirer`](https://github.com/SBoudrias/Inquirer.js#documentation).
 
 ##### As seguintes verificações serão feitas:
 
