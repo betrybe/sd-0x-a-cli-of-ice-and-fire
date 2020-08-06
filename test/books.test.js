@@ -149,7 +149,7 @@ describe('Validar o menu livros', () => {
 
     });
 
-    describe("Quando o um livro for selecionado, exibir na tela as propriedades daquele livro", () => {
+    describe("Quando um livro for selecionado, exibir na tela as propriedades daquele livro", () => {
         let choices = [];
         let bookData = [];
 
