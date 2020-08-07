@@ -101,7 +101,7 @@ lib/menus/character/actions/index.js
 lib/menus/character/actions/list.js
 ```
 
-Para menus books:
+Para o menu books:
 
 ```sh
 mkdir lib/menus/books
@@ -128,7 +128,7 @@ module.exports = {
 };
 ```
 
-Para menus houses:
+Para o menu houses:
 
 ```sh
 mkdir lib/menus/houses
@@ -177,7 +177,7 @@ Ao selecionar essa opção, permita que o usuário insira o nome do livro que de
 
 ##### As seguintes verificações serão feitas:
 
-- [**Verifica se a opção livros está no menu inicial**]
+- [**Verifica se a opção "livros" está no menu inicial**]
 
 - [**Verifica a opção Pesquisar livros está dentro da opção livros**]
 
@@ -193,7 +193,7 @@ A lista deve exibir apenas o nome do livro, e deve permitir que o usuário escol
 
 ##### As seguintes verificações serão feitas:
 
-- [**Verificar se, quando escolho  o livro "A Game of Thrones", ele chama a API e mostra os dados do livro, em seguida mostrando a lista dos outros livros'**]
+- [**Verificar se, quando escolho  o livro "A Game of Thrones", ele chama a API e mostra os dados do livro, em seguida mostrando a lista dos outros livros**]
 
 ### 3 - Caso nada seja digitado no momento da pesquisa, exiba todos os livros, paginados de 10 em 10
 
@@ -221,7 +221,7 @@ Você precisará ler o conteúdo do header `link`, retornado pela API quando uti
 
 - [**Verificar a presença da opção "Próxima página" na lista de livros**]
 
-- [**Verificar a presença da opção "Página anterior" quando vou para próxima página na lista de livros**]
+- [**Verificar a presença da opção "Página anterior" quando vou para a próxima página na lista de livros**]
 
 ### 5 - Quando o um livro for selecionado, exibir na tela as propriedades daquele livro
 
