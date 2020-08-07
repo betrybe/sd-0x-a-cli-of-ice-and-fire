@@ -63,7 +63,7 @@ describe('Validar o menu livros', () => {
       jest.clearAllMocks();
     });
 
-    test("Verificar se, quando escolho  o livro 'A Game of Thrones', ele chama a API e mostra os dados do livro, em seguida mostrando a lista dos outros livros", () => {
+    test("Verificar se, quando escolho o livro 'A Game of Thrones', ele chama a API e mostra os dados do livro, em seguida mostrando a lista dos outros livros", () => {
       expect(superagent.get).toBeCalledWith('https://www.anapioficeandfire.com/api/books?name=A Game of Thrones');
       expect(choices).toContain('A Game of Thrones')
       booksFixture.responses.hasNext.body.forEach((Book) => {
@@ -224,7 +224,7 @@ describe('Validar o menu livros', () => {
       expect(choicesMenu).toContain('Voltar para o menu anterior');
     });
 
-    test('verificar a presença da opção "Voltar para o menu anterior" e "Página anterior" no menu de "Listar livros na página seguinte"', async () => {
+    test('Verificar a presença da opção "Voltar para o menu anterior" e "Página anterior" no menu de "Listar livros na página seguinte"', async () => {
       getSuperagentMock(booksFixture.responses.hasNext);
       superagent.get.mockResolvedValueOnce(booksFixture.responses.hasNext)
           .mockResolvedValueOnce(booksFixture.responses.hasPrevious);
@@ -258,7 +258,7 @@ describe('Validar o menu livros', () => {
       jest.clearAllMocks();
     });
 
-    test('Enviar um nome de livro que não existe e verificar que a mensagem "Nenhum livro encontrado para essa pesquisa"  é exibida na tela posteriormente', async () => {
+    test('Enviar um nome de livro que não existe e verificar que a mensagem "Nenhum livro encontrado para essa pesquisa" é exibida na tela posteriormente', async () => {
       getSuperagentMock(booksFixture.responses.isEmpty);
 
       inquirer.prompt.mockImplementationOnce((questions) => {
