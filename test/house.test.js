@@ -34,7 +34,7 @@ describe('Validar o menu Houses', () => {
       expect(choicesMenu).toContain('Casas');
     });
 
-    test('Ao selecionar casas verificar se existe a opção "listar casas"', async () => {
+    test('Ao selecionar casas verificar se existe a opção "listar casas"', () => {
       inquirer.prompt.mockResolvedValueOnce({});
       houseMenu.run(jest.fn());
       choicesMenu = inquirer.prompt.mock.calls[0][0].choices.map(({ name }) => name);

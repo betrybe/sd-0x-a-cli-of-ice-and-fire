@@ -32,7 +32,7 @@ describe('Validar o menu livros', () => {
       expect(choicesMenu).toContain('Livros');
     });
 
-    test('Verifica a opção Pesquisar livros está dentro da opção livros', async () => {
+    test('Verifica a opção Pesquisar livros está dentro da opção livros', () => {
       inquirer.prompt.mockResolvedValueOnce({})
       booksMenu.run(undefined, { inquirer });
       choicesMenu = inquirer.prompt.mock.calls[0][0].choices.map(({ name }) => name);
@@ -63,7 +63,7 @@ describe('Validar o menu livros', () => {
       jest.clearAllMocks();
     });
 
-    test("Verificar se, quando escolho  o livro 'A Game of Thrones', ele chama a API e mostra os dados do livro, em seguida mostrando a lista dos outros livros", async () => {
+    test("Verificar se, quando escolho  o livro 'A Game of Thrones', ele chama a API e mostra os dados do livro, em seguida mostrando a lista dos outros livros", () => {
       expect(superagent.get).toBeCalledWith('https://www.anapioficeandfire.com/api/books?name=A Game of Thrones');
       expect(choices).toContain('A Game of Thrones')
       booksFixture.responses.hasNext.body.forEach((Book) => {
@@ -95,11 +95,11 @@ describe('Validar o menu livros', () => {
       jest.clearAllMocks();
     });
 
-    test('Digitar nome do livro em branco e ver se a API é chamada passando o parâmetro "nome" em branco', async () => {
+    test('Digitar nome do livro em branco e ver se a API é chamada passando o parâmetro "nome" em branco', () => {
       expect(superagent.get).toHaveBeenNthCalledWith(1, 'https://www.anapioficeandfire.com/api/books?name=');
     });
 
-    test('Ver se retorna todos os livros paginados', async () => {
+    test('Ver se retorna todos os livros paginados', () => {
       expect(choices).toHaveLength(12);
       booksFixture.responses.hasNext.body.forEach((Book) => {
         expect(choices).toContain(Book.name);
@@ -136,12 +136,12 @@ describe('Validar o menu livros', () => {
       jest.clearAllMocks();
     });
 
-    test('Verificar a presença da opção "Próxima página" na lista de livros', async () => {
+    test('Verificar a presença da opção "Próxima página" na lista de livros', () => {
       expect(superagent.get).toBeCalledWith('https://www.anapioficeandfire.com/api/books?name=A Clash of Kings');
       expect(firstPage).toContain('Próxima página')
     });
 
-    test('Verificar a presença da opção "Página anterior" quando vou para próxima página na lista de livros', async () => {
+    test('Verificar a presença da opção "Página anterior" quando vou para próxima página na lista de livros', () => {
       expect(secondPage).toContain('Página anterior')
     });
   });
@@ -173,7 +173,7 @@ describe('Validar o menu livros', () => {
       jest.clearAllMocks();
     });
 
-    test('Selecionar livro "A Clash of Kings" e verificar que seus dados apresentados estão corretos', async () => {
+    test('Selecionar livro "A Clash of Kings" e verificar que seus dados apresentados estão corretos', () => {
       expect(superagent.get).toBeCalledWith('https://www.anapioficeandfire.com/api/books?name=A Clash of Kings');
       expect(bookData).toContain('https://www.anapioficeandfire.com/api/books/1');
       expect(bookData).toContain('978-0553103540');
@@ -196,7 +196,7 @@ describe('Validar o menu livros', () => {
       jest.clearAllMocks();
     });
 
-    test('Verificar a presença da opção "Voltar para o menu principal" no menu de livros', async () => {
+    test('Verificar a presença da opção "Voltar para o menu principal" no menu de livros', () => {
       inquirer.prompt.mockResolvedValueOnce({});
       booksMenu.run(undefined, { inquirer });
       choicesMenu = inquirer.prompt.mock.calls[0][0].choices.map(({ name }) => name);
